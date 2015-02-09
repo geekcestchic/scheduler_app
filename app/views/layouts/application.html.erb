@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SchedulerApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'event_calendar' %>
+  <%= javascript_include_tag 'event_calendar' %>
+  <%= csrf_meta_tags %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</head>
+<body>
+<h1>SCHEDULER APP</h1>
+<%= render partial: 'layouts/nav' %>
+
+<%= yield %>
+
+</body>
+</html>
