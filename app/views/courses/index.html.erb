@@ -1,3 +1,14 @@
-<h1>COURSE CALENDAR</h1>
+<h1>COURSES</h1>
 
-<%= raw(event_calendar) %>
+<% @courses.each do |course| %>
+  <h2><%= link_to course.name, course_path(course) %></h2>
+  <p>FROM: <%= course.start_at %> UNTIL: <%= course.end_at %></p>
+  <% if user_signed_in? %>
+    <% if current_user.admin? %>
+      <%= link_to 'Edit', edit_course_path(course) %>
+      <%= link_to 'Delete', course_path(course), method: :delete %>
+    <% end %>
+  <% end %>
+<% end %>
+
+

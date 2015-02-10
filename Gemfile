@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'foundation-rails'
+gem 'simple_form'
+gem 'country_select'
 gem 'cancancan'
 gem 'devise'
 gem 'event-calendar', :require => 'event_calendar'

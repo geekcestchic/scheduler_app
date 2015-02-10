@@ -1,0 +1,4 @@
+<%= simple_form_for @registration do |f| %>
+  <%= f.association :course, as: :radio_buttons %>
+  <%= f.submit 'Apply' %>
+<% end %>

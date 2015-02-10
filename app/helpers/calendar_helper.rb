@@ -11,14 +11,15 @@ module CalendarHelper
       :event_strips => @event_strips,
       :month_name_text => I18n.localize(@shown_month, :format => "%B %Y"),
       :previous_month_text => "<< " + month_link(@shown_month.prev_month),
-      :next_month_text => month_link(@shown_month.next_month) + " >>"    }
+      :next_month_text => month_link(@shown_month.next_month) + " >>"    
+    }
   end
 
   def event_calendar
     # args is an argument hash containing :course, :day, and :options
     calendar event_calendar_opts do |args|
-      course = args[:course]
-      %(<a href="/events/#{course.id}" title="#{h(course.name)}">#{h(course.name)}</a>)
+      event = args[:event]
+      %(<a href="/events/#{event.id}" title="#{h(event.name)}">#{h(event.name)}</a>)
     end
   end
 end

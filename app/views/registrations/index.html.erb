@@ -1,0 +1,22 @@
+
+<!-- Method 1 -->
+
+<% current_user.courses.each do |course| %>
+  <h2><%= link_to course.name, course_path(course) %></h2>
+  <p>FROM: <%= course.start_at %> UNTIL: <%= course.end_at %></p>
+  <%= link_to 'Leave Course' %>
+<% end %>
+
+<!-- Method 2 -->
+
+<% @registrations.each do |registration| %>
+  <% registered_course = Course.where(id: registration.course_id) %>
+  <h2><%= link_to registered_course.name %></h2>
+  <p>FROM: <%= registered_course.start_at %> UNTIL: <%= registered_course.end_at %></p>
+  <%= link_to 'Leave Course' %>
+<% end %>
+
+<% if current_user.courses.blank? %>
+  <p>You are not currently registered to any course.</p>
+  <%= link_to 'Sign-up to a new course', new_registration_path %>
+<% end %>

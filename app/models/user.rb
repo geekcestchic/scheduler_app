@@ -6,4 +6,16 @@ class User < ActiveRecord::Base
   
   has_many :registrations
   has_many :courses, through: :registrations
+
+  def admin?
+    self.role == 'admin'
+  end
+
+  def instructor?
+    self.role == 'instructor'
+  end
+
+  def student?
+    self.role == 'student'
+  end
 end
