@@ -1,7 +1,16 @@
 class CoursesController < ApplicationController
   
+  authorize_resource
+  before_action :authenticate_user!, only: [:edit, :update]
+
   def index
     @courses = Course.all
+
+    @month = (params[:month] || (Time.zone || Time).now.month).to_i
+    @year = (params[:year] || (Time.zone || Time).now.year).to_i
+
+    @shown_month = Date.civil(@year, @month)
+    @event_strips = Course.event_strips_for_month(@shown_month)
   end
 
   def new
@@ -9,9 +18,9 @@ class CoursesController < ApplicationController
   end
 
   def create
-    course = Course.new(course_params)
+    @course = Course.new(course_params)
 
-    if course.save
+    if @course.save
       redirect_to courses_path
     else
       render 'new'

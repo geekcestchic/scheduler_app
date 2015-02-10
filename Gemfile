@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'email_validator'
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'country_select'

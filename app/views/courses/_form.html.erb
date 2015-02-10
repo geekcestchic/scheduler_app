@@ -1,14 +1,14 @@
 <%= simple_form_for(@course) do |f| %>
   <% if @course.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+<!--     <div id="error_explanation" we have defined this in the course model>
+      <p><%#= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</p>
 
       <ul>
-      <% @course.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+      <%#s @course.errors.full_messages.each do |message| %>
+        <li><%#= message %></li>
+      <%# end %>
       </ul>
-    </div>
+    </div> -->
   <% end %>
 
   <div class="field">

@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
   def student?
     self.role == 'student'
   end
+
+  validates :email, presence: true
+  validates :my_email_attribute, :email => true
+  validates :password, presence: true
 end

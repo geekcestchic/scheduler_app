@@ -81,6 +81,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    email_validator (1.5.0)
+      activemodel
     erubis (2.7.0)
     event-calendar (2.3.3)
     excon (0.44.1)
@@ -336,6 +338,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   country_select
   devise
+  email_validator
   event-calendar
   fog
   foundation-rails

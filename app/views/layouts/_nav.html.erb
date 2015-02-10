@@ -1,9 +1,14 @@
-<div class="link">
-    <nav>
+  <nav class="site-nav">
     <ul>
+      <li>
+        <%= link_to(image_tag('ga-logo.png', class:'img-thumbnail'), root_path) %>
+      </li>
       <% if user_signed_in? %>
         <li>
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
+        </li>
+        <li>
+          <%= link_to 'My Profile' %>
         </li>
         <% if current_user.student? %>
           <li>
@@ -28,4 +33,3 @@
       </li>
     </ul>
   </nav>
-</div>

@@ -1,4 +1,7 @@
 <%= simple_form_for @registration do |f| %>
-  <%= f.association :course, as: :radio_buttons %>
+  <%= f.association :course, as: :check_boxes %>
   <%= f.submit 'Apply' %>
 <% end %>
+
+<p.italic>"Just be ready for the emotional roller-coaster" Anonymous student</p>
+<%= image_tag 'roller-coaster.gif' %>

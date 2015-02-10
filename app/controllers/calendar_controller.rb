@@ -1,5 +1,5 @@
 class CalendarController < ApplicationController
-  
+  # Not used at the moment, will delete if needed 
   def index
     @month = (params[:month] || (Time.zone || Time).now.month).to_i
     @year = (params[:year] || (Time.zone || Time).now.year).to_i
