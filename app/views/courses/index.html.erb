@@ -1,10 +1,10 @@
 <h1>COURSES</h1>
 <div class="left">
   <% @courses.each do |course| %>
-    <div ="article">
+    <div class="article">
       <h2><%= link_to course.name, course_path(course) %></h2>
-      <p>FROM: <%= course.start_at %></p>
-      <p>UNTIL: <%= course.end_at %></p>
+      <p>FROM: <%= course.start_at.to_date %></p>
+      <p>UNTIL: <%= course.end_at.to_date %></p>
       <% if user_signed_in? %>
         <% if current_user.admin? %>
           <%= link_to 'Edit', edit_course_path(course) %>

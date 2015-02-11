@@ -6,6 +6,8 @@
 
 <p>Classroom: <%= @course.classroom.name %></p> 
 
+<%= image_tag @course.image.detail.url %>
+
 <% if user_signed_in? %>
   <% if current_user.admin? || current_user.instructor? %>
     <p>Currently Enrolled Students: 

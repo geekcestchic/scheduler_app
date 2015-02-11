@@ -115,8 +115,8 @@ textarea {
   min-height: 50px; }
 
 select {
-  width: 100%; }
-
+  width: 100%; 
+}
 .row {
   width: 100%;
   margin-left: auto;
@@ -1147,7 +1147,7 @@ button, .button {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
-  margin: 0 0 1.25rem;
+  margin: 1.25rem;
   position: relative;
   text-decoration: none;
   text-align: center;
@@ -1157,8 +1157,8 @@ button, .button {
   display: inline-block;
   padding-top: 1rem;
   padding-right: 2rem;
-  padding-bottom: 1.0625rem;
-  padding-left: 2rem;
+/*  padding-bottom: 1.0625rem;
+*/  padding-left: 2rem;
   font-size: 1rem;
   background-color: #008CBA;
   border-color: #007095;

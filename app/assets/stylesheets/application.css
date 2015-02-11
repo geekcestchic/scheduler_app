@@ -15,15 +15,37 @@
  *= require foundation_and_overrides
 
  */
-
- body{
-    font-family: 'Open Sans Condensed', sans-serif;
- }
+*{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
  .article{
   padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  width: 300px;
+  border: dotted 1px;
+ }
+  .box{
+  padding: 70px;
+  margin: 130px 20px;
+  border-radius: 20px;
+  width: 300px;
+  border: dotted 1px;
+  display: inline-block;
+  text-align:center;
+  font-size: 25px;
+  width:28%;
+ }
+
+ .forms{
+  margin:20px;
+  background: #FAF8F0;  
+  padding:20px;
+  border-radius: 10px;
+  text-align: center;
  }
  div a:hover{
-  background: grey;
+  color: grey;
  }
  nav{
   background: black;
@@ -46,8 +68,8 @@
  }
 h1{
   text-align: center;
-  padding: 30px;
-  border-bottom: solid 3px;
+  padding: 40px;
+  border-bottom: dotted 1px;
   font-size:45px;
   margin:0;
 }
@@ -57,9 +79,34 @@ h1{
 .left{
   padding:20px;
 }
+footer{
+clear:both;
+bottom: 0;
+width: 100%;
+text-align: center;
+}
+footer nav{
+  background:white;
+  border-top: dotted 1px;
+}
+footer nav a{
+  color:black;
+}
 h2 a{
   color:black;
 }
 p img{
-  border-radius: 100px
+  border-radius: 100px;
+}
+button{
+  margin:20px;
+}
+button a{
+  color:white;
+}
+select{
+  width:10%;
+}
+input{
+  width:10%;
 }

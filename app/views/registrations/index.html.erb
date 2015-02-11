@@ -1,11 +1,14 @@
 
 <% current_user.courses.each do |course| %>
-  <h2><%= link_to course.name, course_path(course) %></h2>
-  <p>FROM: <%= course.start_at %> UNTIL: <%= course.end_at %></p>
-  <%= link_to 'Cancel Course Application' %>
+  <div class="article">
+    <h2><%= link_to course.name, course_path(course) %></h2>
+    <p>FROM: <%= course.start_at.to_date %> ---- UNTIL: <%= course.end_at.to_date %></p>
+    <%= link_to 'Cancel Course Application' %>
+  </div>
 <% end %>
 
 <% if current_user.courses.blank? %>
   <p>You are not currently registered to any course.</p>
 <% end %>
-<div class="button"><%= link_to 'Sign-up to a new course', new_registration_path %></p>
+<br>
+<button class="radius"><%= link_to 'Sign-up to a new course', new_registration_path %></button>

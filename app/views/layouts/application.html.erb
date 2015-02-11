@@ -16,6 +16,11 @@
   <body>
     <%= render partial: 'layouts/nav'  %>
     <%= yield %>
-
+    <footer>
+      <nav>
+        <li><%= link_to 'Contact' %></li>
+        <li><%= link_to 'Something' %></li>
+      </nav>
+    </footer>
   </body>
 </html>
