@@ -16,6 +16,15 @@
 
  */
 
+ body{
+    font-family: 'Open Sans Condensed', sans-serif;
+ }
+ .article{
+  padding: 20px;
+ }
+ div a:hover{
+  background: grey;
+ }
  nav{
   background: black;
  }
@@ -32,7 +41,7 @@
  nav a{
   color:white;
   padding: 0 30px;
-  font-family: 'Open Sans Condensed', sans-serif;
+
   font-size: 20px;
  }
 h1{
@@ -40,7 +49,6 @@ h1{
   padding: 30px;
   border-bottom: solid 3px;
   font-size:45px;
-  font-family: 'Open Sans Condensed', sans-serif;
   margin:0;
 }
 .italic{
@@ -48,4 +56,10 @@ h1{
 }
 .left{
   padding:20px;
+}
+h2 a{
+  color:black;
+}
+p img{
+  border-radius: 100px
 }

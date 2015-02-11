@@ -19,14 +19,14 @@ class Course < ActiveRecord::Base
   end
 
   def valide_classroom_free
-    self.all.each do |course|
-      time_range = course.start_at..course.end_at
-      if time_range.include? course.start_at || time_range.include? course.end_at
-        if classroom == params[:id][:classroom]
-          errors.add(:classroom, "Your classroom is busy during this time!") 
-        end
-      end
-    end
+    # self.all.each do |course|
+    #   time_range = course.start_at..course.end_at
+    #   if time_range.include? course.start_at || time_range.include? course.end_at
+    #     if classroom == params[:id][:classroom]
+    #       errors.add(:classroom, "Your classroom is busy during this time!") 
+    #     end
+    #   end
+    # end
   end
 
 end
