@@ -57,13 +57,13 @@
   color:black;
  }
  #one{
-  background-image: url("/assets/images/menu-1.jpg");
+  background-image: url(/assets/images/menu-1.jpg);
  }
  #two{
-  background-image: url("/assets/images/menu-2.jpg");
+  background-image: url(/assets/images/menu-2.jpg);
  }
  #three{
-  background-image: url("/assets/images/menu-3.jpg");
+  background-image: url(/assets/images/menu-3.jpg);
  }
 
  .forms{
