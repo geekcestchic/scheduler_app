@@ -1,0 +1,18 @@
+<h1><strong>My Courses</strong></h1>
+<div class="forms">
+  <% current_user.courses.each do |course| %>
+    <div class="article">
+      <h2><%= link_to course.name, course_path(course) %></h2>
+      <p>Starts: <%= course.start_at.to_date %> ---- Ends: <%= course.end_at.to_date %></p>
+      <%= image_tag course.image.thumb.url %>
+      <p><%= link_to 'Cancel Course Application' %></p>
+    </div>
+  <% end %>
+
+  <% if current_user.courses.blank? %>
+    <p>You are not currently registered to any course.</p>
+    <%= image_tag 'unhappy.jpg' %>
+  <% end %>
+  <br>
+  <button class="radius"><%= link_to 'Sign-up to a new course', new_enrolment_path %></button>
+</div>

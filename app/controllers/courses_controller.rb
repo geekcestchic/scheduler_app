@@ -45,7 +45,7 @@ class CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:name, :start_at, :end_at, :classroom_id)
+    params.require(:course).permit(:name, :start_at, :end_at, :classroom_id, :image, :remote_image_url)
   end
 
   def destroy

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   #devise gem
   devise_for :users
-  resources :registrations
+  resources :enrolments
   
   #our 2 basic controllers
   resources :courses

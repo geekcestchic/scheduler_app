@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  has_many :registrations
-  has_many :courses, through: :registrations
+  has_many :enrolments
+  has_many :courses, through: :enrolments
 
   def admin?
     self.role == 'admin'

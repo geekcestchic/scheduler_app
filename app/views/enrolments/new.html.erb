@@ -1,7 +1,7 @@
 <div class="forms">
   <h2>Choose Your Course</h2>
 
-  <%= simple_form_for @registration do |f| %>
+  <%= simple_form_for @enrolment do |f| %>
     <%= f.association :course, as: :select %>
     <%= f.submit 'Apply' %>
   <% end %>

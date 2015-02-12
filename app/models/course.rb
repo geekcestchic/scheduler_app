@@ -1,11 +1,11 @@
 class Course < ActiveRecord::Base
-  mount_uploader :image, CourseImageUploader
+  mount_uploader :image, ImageUploader
 
   has_event_calendar
 
   belongs_to :classroom
-  has_many :registrations
-  has_many :users, through: :registrations
+  has_many :enrolments
+  has_many :users, through: :enrolments
 
   validates :name, presence: true, length: {minimum: 2, maximum: 50}, uniqueness: true
   validates :start_at, :end_at, :classroom, presence: true

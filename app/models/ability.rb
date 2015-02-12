@@ -13,7 +13,7 @@ class Ability
 
       can [:manage], Course if user.instructor?
 
-      can [:edit, :update, :destroy], Registration, user_id: user.id 
+      can [:edit, :update, :destroy], Enrolment, user_id: user.id 
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

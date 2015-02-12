@@ -24,17 +24,46 @@
   border-radius: 20px;
   width: 300px;
   border: dotted 1px;
+  text-align: center;
+  display:inline-block;
+ }
+ .article img{
+  border-radius: 20px;
+  padding:5px;
+ }
+ img:hover{
+  opacity:0.5;
+ }
+ #vertical{
+  display:block;
  }
   .box{
   padding: 70px;
-  margin: 130px 20px;
-  border-radius: 20px;
-  width: 300px;
-  border: dotted 1px;
+  margin:-3px;
+  height:420px;
+  width: 33.45%;
   display: inline-block;
   text-align:center;
   font-size: 25px;
-  width:28%;
+  color:black;
+  background: #FAF8F0; 
+  background-size: 200%; 
+ }
+ .box:hover{
+  background-size: 220%;
+  transition: all 2s;
+ }
+ .box a{
+  color:black;
+ }
+ #one{
+  background-image: url("menu-1.jpg");
+ }
+ #two{
+  background-image: url("menu-2.jpg");
+ }
+ #three{
+  background-image: url("menu-3.jpg");
  }
 
  .forms{
@@ -43,6 +72,13 @@
   padding:20px;
   border-radius: 10px;
   text-align: center;
+ }
+ .forms img{
+  max-width: 300px;
+ }
+ .forms img:hover{
+  border-radius: 20px;
+  transition: 2s;
  }
  div a:hover{
   color: grey;
@@ -69,9 +105,10 @@
 h1{
   text-align: center;
   padding: 40px;
-  border-bottom: dotted 1px;
-  font-size:45px;
+  font-size:50px;
   margin:0;
+  background: #C44F5D;
+  color:white;
 }
 .italic{
   font-style: italic;
@@ -101,12 +138,31 @@ p img{
 button{
   margin:20px;
 }
+button:hover{
+  border-radius: 100px;
+  transition: all 2s;
+}
 button a{
   color:white;
 }
 select{
   width:10%;
 }
-input{
-  width:10%;
+input[type="submit"]{
+  background:black;
+  border:none;
+  border-radius: 5px;
+  padding:10px;
+  color:white;
+  margin:20px;
 }
+input[type="submit"]:hover{
+  color:grey;
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+  width:30%;
+  margin:20px auto;
+  }
+  table tr th, table tr td{
+    text-align: center;
+  }
