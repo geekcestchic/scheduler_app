@@ -182,9 +182,14 @@ a.ec-day-link {
   /* doesn't look as good as js highlighting */
    /*background-color: #2eac6a; */
 }
-
+.ec-event-bg{
+  background:white !important;
+  border:dotted 1px !important;
+  padding: 5px !important;
+}
 .ec-event-bg a {
-  color: white;
+  color: black;
+  padding:5px;
 }
 
 /* used to distinguish non-all_day events */

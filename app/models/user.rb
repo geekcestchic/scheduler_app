@@ -22,6 +22,6 @@ class User < ActiveRecord::Base
   end
 
   validates :email, presence: true
-  validates :my_email_attribute, :email => true
+  validates :email, :email => true
   validates :password, presence: true
 end
