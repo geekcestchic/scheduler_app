@@ -2,14 +2,14 @@ source 'https://rubygems.org'
 
 ruby '2.1.4'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'email_validator'
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'country_select'
 gem 'cancancan'
 gem 'devise'
-gem 'event-calendar', :require => 'event_calendar'
+gem 'event-calendar', git: 'https://github.com/jemboh/event_calendar'
 gem 'rails_admin'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
