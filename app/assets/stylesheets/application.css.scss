@@ -57,10 +57,10 @@
   color:black;
  }
  #one{
-  background-image: url(/assets/images/menu-1.jpg);
+  background-image: image-url('menu-1.jpg');
  }
  #two{
-  background-image: url(/assets/images/menu-2.jpg);
+  background-image: asset-url('menu-2.jpg', image);
  }
  #three{
   background-image: url(/assets/images/menu-3.jpg);
