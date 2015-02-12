@@ -81,7 +81,7 @@
   transition: 2s;
  }
  div a:hover{
-  color: grey;
+  color: #C44F5D;
  }
  nav{
   background: black;
@@ -157,7 +157,7 @@ input[type="submit"]{
   margin:20px;
 }
 input[type="submit"]:hover{
-  color:grey;
+  color:#C44F5D;
 }
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
   width:30%;

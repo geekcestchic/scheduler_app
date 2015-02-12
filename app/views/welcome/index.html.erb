@@ -3,7 +3,11 @@
   <%= link_to 'Browse our Courses', courses_path %>
 </div>
 <div class="box" id="two">
-  <%= link_to 'Create a GA Account', new_user_registration_path %>
+  <% if user_signed_in?  %>
+    <%= link_to 'Your Upcoming Courses', enrolments_path %>
+  <% else %>
+    <%= link_to 'Create a GA Account', new_user_registration_path %>
+  <% end %>
 </div>
 <div class="box" id="three">
   <%= link_to 'Sign-up to a Course', new_enrolment_path %>

@@ -105,7 +105,7 @@
 }
 
 .ec-today-bg {
-  background-color: black;
+  background-color: #C44F5D;
 }
 
 .ec-row-table {
@@ -132,7 +132,7 @@ a.ec-day-link {
 }
 
 .ec-today-header {
-  background-color: black;
+  background-color: #C44F5D;
   color:white;
 }
 
@@ -154,16 +154,14 @@ a.ec-day-link {
 .ec-event-cell {
   cursor: pointer;
   vertical-align: top;
-  padding-right: 1px;
+ /* padding-right: 1px;
   padding-left: 2px;
-}
+*/}
 
 .ec-event-cell a {
   text-decoration: none;
   display: block;
   height: 100%;
-  /*border-radius: 100px;*/
-  /*paddgin:3px;*/
 }
 
 .ec-no-event-cell {
@@ -175,7 +173,6 @@ a.ec-day-link {
   border-radius: 5px;
   overflow: hidden;
   white-space: nowrap;
-  margin:3px 0;
  }
 .ec-event a{
   color: black;
