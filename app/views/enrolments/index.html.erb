@@ -11,7 +11,7 @@
 
   <% if current_user.courses.blank? %>
     <p>You are not currently registered to any course.</p>
-    <%= image_tag 'unhappy.jpg' %>
+    <%= image_tag 'unhappy.gif' %>
   <% end %>
   <br>
   <button class="radius"><%= link_to 'Sign-up to a new course', new_enrolment_path %></button>

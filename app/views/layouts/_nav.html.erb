@@ -34,5 +34,10 @@
       <li>
         <%= link_to('Courses', courses_path)  %>
       </li>
+      <% if user_signed_in? %>
+        <li>
+          <p class="small">Signed in as: <%= current_user.email %></p>
+        </li>
+      <% end %>
     </ul>
   </nav>
