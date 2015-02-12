@@ -60,10 +60,10 @@
   background-image: image-url('menu-1.jpg');
  }
  #two{
-  background-image: image-url('menu-2.jpg');
+  background: url(<%= asset_data_uri 'menu-2.jpg' %>)
  }
  #three{
-  background-image: image-url('menu-3.jpg');
+  background-image: image-url("menu-3.jpg");
  }
 
  .forms{
