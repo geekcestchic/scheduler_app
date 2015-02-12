@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.4'
-gem 'fog'
+
 gem 'rails_12factor'
 gem 'email_validator'
 gem 'foundation-rails'
