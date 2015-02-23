@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.4'
-
+gem 'haml-rails'
 gem 'rails_12factor', group: :production
 gem 'email_validator'
 gem 'foundation-rails'

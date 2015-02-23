@@ -1,0 +1,18 @@
+%nav.site-nav
+  %ul
+    %li= link_to(image_tag('ga-logo.png', class:'img-thumbnail'), root_path)
+    - if user_signed_in?
+      %li= link_to('Logout', destroy_user_session_path, :method => :delete)
+      %li= link_to 'My Profile'
+      - if current_user.student?
+        %li= link_to 'My Courses', enrolments_path 
+      - if current_user.admin? || current_user.instructor?
+        %li= link_to 'Create Course', new_course_path
+        %li= link_to 'Website Admin', rails_admin_path
+    - else
+      %li= link_to 'Login', new_user_session_path 
+      %li= link_to 'Register', new_user_registration_path
+    %li= link_to 'Courses', courses_path
+    - if user_signed_in?
+      %li
+        %p.small Signed in as: #{current_user.email}

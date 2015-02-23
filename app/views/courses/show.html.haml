@@ -1,0 +1,20 @@
+.forms
+  %h2= @course.name
+  %p Starts: #{@course.start_at.to_date}
+  %p Ends: #{@course.end_at.to_date}
+  %p Classroom: #{@course.classroom.name}
+  = image_tag @course.image.detail.url
+
+  - if user_signed_in?
+    - if current_user.admin? || current_user.instructor?
+      %p Currently Enrolled Students:
+      - @course.users.each do |user|
+        = user.email
+        %p= 'No Students Signed-Up Yet' if @course.users.blank?
+    - if current_user.admin?
+      = link_to 'Edit', edit_course_path(@course)
+      = link_to 'Delete', course_path(@course), method: :delete
+    - if current_user.student?
+      = link_to 'Sign-up for this course', new_enrolment_path
+
+  %p= link_to 'Back', courses_path

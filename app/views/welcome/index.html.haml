@@ -1,0 +1,9 @@
+%h1
+  %strong WELCOME TO YOUR GA SCHEDULER
+.box#one= link_to 'Browse our Courses', courses_path
+.box#two
+  - if user_signed_in?
+    = link_to 'Your Upcoming Courses', enrolments_path
+  - else
+    = link_to 'Create a GA Account', new_user_registration_path
+.box#three= link_to 'Sign-up to a Course', new_enrolment_path

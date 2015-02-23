@@ -1,0 +1,15 @@
+.forms
+  =simple_form_for @course do |f|
+    - if @course.errors.any?
+      #error_explanation 
+        %ul
+          - @course.errors.full_messages.each do |message|
+            %li= message
+    .field= f.input :name
+    .field= f.input :start_at
+    .field= f.input :end_at
+    .field= f.association :classroom, as: :select
+    .field
+      = f.label :remote_image_url, "Or find a file URL"
+      = f.text_field :remote_image_url
+    .actions= f.submit

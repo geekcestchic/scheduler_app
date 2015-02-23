@@ -1,0 +1,7 @@
+.forms
+  %h2 Choose Your Course
+  = simple_form_for @enrolment do |f|
+    = f.association :course, as: :select
+    = f.submit 'Apply'
+  %p.italic "Just be ready for the emotional roller-coaster" Anonymous student
+  %p= image_tag 'roller-coaster.gif'
