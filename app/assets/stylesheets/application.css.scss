@@ -22,6 +22,10 @@
 *{
   font-family: $font-default;
 }
+body{
+  font-size: 0;
+  width:100%;
+}
 .article{
   padding: 20px;
   margin: 20px;
@@ -45,35 +49,33 @@
 
 .box{
   padding: 70px;
-  margin:-3px;
+  margin:0;
   height:420px;
-  width: 33.45%;
+  width: 33.3%;
   display: inline-block;
   text-align:center;
   font-size: 25px;
   color:black;
   background: $color-background; 
-  background-size: 200%; 
-    &:hover{
-      background-size: 220%;
-      opacity: 0.3;
-      transition: all 2s;
-    }
-    a{
-      color:black;
-    }
-    #one{
-      background-image: url('menu-1.jpg');
-    }
-    #two{
-      // background: url(<%= asset_path 'menu-2.jpg' %>)
-    }
-    #three{
-      // background: url(<%= asset_path 'menu-3.jpg' %>)
-    }
+  background-size: 250%; 
+  &:hover{
+    background-size: 220%;
+    opacity: 0.3;
+    transition: all 2s;
+  }
+  a{
+    color:black;
+  }
 }
-  
-
+#one{
+  background-image: image-url("menu-1.jpg");
+}
+#two{
+  background-image: image-url("menu-2.jpg");
+}
+#three{
+  background-image: image-url("menu-3.jpg");
+}
 
 .forms{
   margin:20px;
@@ -81,14 +83,14 @@
   padding:20px;
   border-radius: 10px;
   text-align: center;
-    img{
-      max-width: 500px;
-      border-radius: 20px;
-        &:hover{
-          border-radius: 20px;
-          transition: 2s;
-        }
-    }
+  img{
+    max-width: 500px;
+    border-radius: 20px;
+      &:hover{
+        border-radius: 20px;
+        transition: 2s;
+      }
+  }
 }
 
 div a:hover{
@@ -133,13 +135,13 @@ footer{
   bottom: 0;
   width: 100%;
   text-align: center;
-    nav{
-      background:white;
-      border-top: dotted 1px;
-        a{
-          color:black;
-        }
-    }
+  nav{
+    background:white;
+    border-top: dotted 1px;
+      a{
+        color:black;
+      }
+  }
 }
 
 
